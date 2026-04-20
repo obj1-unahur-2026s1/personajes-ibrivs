@@ -6,13 +6,16 @@ object luisa{
   method asignarPersonajeActual(personaje){
     personajeActual = personaje
   }
-
-
+  method aparece(elemento) {
+    personajeActual.encontrar(elemento)
+  }
 }
 
 object floki {
   var armaActual = ballesta
-
+  method cambiarArma(unArma) {
+    armaActual = unArma
+  }
   method encontrar(elemento){
     elemento.recibirAtaque(armaActual.potencia())
     armaActual.uso()
